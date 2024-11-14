@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://b262rkutvu1e2"]
+
+[ext_resource type="Script" path="res://scripts/job_dropdown.gd" id="1_5n6ph"]
+
+[sub_resource type="Theme" id="Theme_yj26j"]
+
+[node name="JobDropdown" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5n6ph")
+joblist_file = "res://resource/class.csv"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MenuButton" type="MenuButton" parent="ReferenceRect2"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme = SubResource("Theme_yj26j")
+text = "aAAAAAAAAAAAAAAAAAAAAAA"
+
+[node name="MenuBar" type="MenuBar" parent="ReferenceRect2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ReferenceRect3" type="ReferenceRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
