@@ -13,7 +13,7 @@ config_version=5
 config/name="mj-ikdv01"
 run/main_scene="res://scenes/job_dropdown.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://mj_ikvd01_iconx.svg"
 
 [display]
 
