@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b262rkutvu1e2"]
 
 [ext_resource type="Script" path="res://scripts/job_dropdown.gd" id="1_5n6ph"]
-[ext_resource type="Texture2D" uid="uid://d26ht7wxru8i7" path="res://assets/pink_flowers.jpg" id="2_2yyfj"]
+[ext_resource type="Texture2D" uid="uid://d26ht7wxru8i7" path="res://assets/annie-spratt-E33eOc7wjUY-unsplash.jpg" id="2_2yyfj"]
 [ext_resource type="Texture2D" uid="uid://8atfodjbiynb" path="res://assets/BigBorder/panel-border-028.png" id="2_l44as"]
 [ext_resource type="PackedScene" uid="uid://djqhoj5v4s7r" path="res://scenes/dropdown_group.tscn" id="4_37h2r"]
 

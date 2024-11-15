@@ -1,14 +1,11 @@
-extends HBoxContainer
+extends Control
 
 @export_file("*.csv") var joblist_file = ""
-
-@onready var menupopup : PopupMenu = %MenuButton.get_popup()
 
 var job_table := Dictionary()
 var job_properties := Array()
 
 func _ready():
-	menupopup.id_pressed.connect(_on_popup_item_pressed)
 	
 	if !joblist_file.is_empty():
 		var file = FileAccess.open(joblist_file, FileAccess.READ)
@@ -18,7 +15,7 @@ func _ready():
 		var next_csv_line := file.get_csv_line(",")
 		var firstrow_init := false
 		while next_csv_line != PackedStringArray([""]):
-			print(str(next_csv_line))
+			#print(str(next_csv_line))
 			
 			#var column = 1 
 			var i = 0
@@ -54,8 +51,7 @@ func _ready():
 		
 		#print(str(job_table))
 		#print(job_table[1])
-		for job_item in job_table.keys():
-			menupopup.add_item(job_table[job_item]["JOBNAME"])
-
-func _on_popup_item_pressed(id):
-	%MenuButton.text = menupopup.get_item_text(menupopup.get_item_index(id))
+		%DropdownGroup.job_table = job_table
+		%DropdownGroup.initialize_menupopup()
+			
+		
