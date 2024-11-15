@@ -17,21 +17,36 @@ joblist_file = "res://resource/class.csv"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ReferenceRect2" type="ReferenceRect" parent="."]
+[node name="ReferenceRect2" type="VBoxContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MenuButton" type="MenuButton" parent="ReferenceRect2"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-theme = SubResource("Theme_yj26j")
-text = "aAAAAAAAAAAAAAAAAAAAAAA"
+[node name="DropdownGroup" type="HBoxContainer" parent="ReferenceRect2"]
+layout_mode = 2
 
-[node name="MenuBar" type="MenuBar" parent="ReferenceRect2"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="MenuButton" type="MenuButton" parent="ReferenceRect2/DropdownGroup"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = SubResource("Theme_yj26j")
+text = "(Choose your Job)"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReferenceRect2/DropdownGroup"]
+layout_mode = 2
+
+[node name="JobName" type="Label" parent="ReferenceRect2/DropdownGroup/VBoxContainer"]
+layout_mode = 2
+
+[node name="JobDesc" type="Label" parent="ReferenceRect2/DropdownGroup/VBoxContainer"]
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="ReferenceRect2/DropdownGroup"]
+layout_mode = 2
+size_flags_horizontal = 3
+auto_height = true
+item_count = 3
+item_0/text = "asfasf"
+item_1/text = "asgasg"
+item_2/text = "sdfgdfhdfh"
 
 [node name="ReferenceRect3" type="ReferenceRect" parent="."]
 layout_mode = 2
